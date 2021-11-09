@@ -15,11 +15,13 @@
        monitoring: no
        vpc_subnet_id: subnet-099c5c4757d183892
        assign_public_ip: yes
-   - name: Install Java using Ansible
-     become: yes
-     apt:
-       name: "{{ packages }}"
-       state: present
-     vars:
-        packages:
-           - openjdk-8-jdk  
+   
+   - name: yum update
+     yum:
+       name: '*'
+       state: latest
+
+  - name: Install java
+    yum:
+      name: java-8-openjdk-devel
+      state: present
