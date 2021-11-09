@@ -22,7 +22,7 @@
     <testThreads>4</testThreads>
     <streamLogs>false</streamLogs>
     <sonar.login>admin</sonar.login>
-    <sonar.password>sonar</sonar.password>
+    <sonar.password>flaircyril12</sonar.password>
  </properties>
   <dependencies>
     <dependency>
