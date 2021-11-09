@@ -13,6 +13,6 @@
        wait_timeout: 500
        count: 1
        monitoring: no
-       vpc_subnet_id: subnet-019d14a13c07a30c5 
+       vpc_subnet_id: subnet-06668360928acbcb3
        assign_public_ip: yes
        
