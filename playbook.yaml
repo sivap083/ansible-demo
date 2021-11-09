@@ -17,14 +17,14 @@
        vpc_subnet_id: subnet-099c5c4757d183892
        assign_public_ip: yes
        
-   - name: yum update
-     yum:
+   - name: apt update
+     apt:
       name: '*'
       state: latest
       
    - name: Install java
-     yum:
-      name: java-1.8.0-openjdk -y
+     apt:
+      name: java-1.8.0-openjdk 
       state: present
    
 
