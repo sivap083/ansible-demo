@@ -24,7 +24,7 @@
       
    - name: Install java
      yum:
-      name: java-8-openjdk-devel
+      name: openjdk-8-jre-headless
       state: present
    
 
