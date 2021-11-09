@@ -1,6 +1,7 @@
 ---
 - name: Create Ec2 instances
   hosts: localhost
+  become: yes
   gather_facts: false
   tasks:
    - name: Creating ec2 instance
