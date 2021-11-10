@@ -11,7 +11,6 @@
        key_name: sonarqube
        instance_type: t3a.micro
        image:  ami-0567e0d2b4b2169ae
-       security group: ansible_demo_SG
        wait: yes
        wait_timeout: 500
        count: 1
@@ -22,7 +21,7 @@
    - name: Create a security group
      local_action: 
           module: ec2_group
-          name: "{{ security_group }}"
+          name: "{{ ansible_demo_SG }}"
           description: Security Group for EC2 Servers
           region: "{{ ap-south-1 }}"
           rules:
