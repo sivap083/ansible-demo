@@ -21,7 +21,7 @@
    - name: Create a security group
      local_action: 
           module: ec2_group
-          name: "{{ ansible_demo_SG }}"
+          name: "{{ Security_group }}"
           description: Security Group for EC2 Servers
           region: "{{ ap-south-1 }}"
           rules:
