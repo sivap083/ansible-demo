@@ -20,7 +20,7 @@
         local_action: 
           module: ec2_group
           name: "{{ security_group }}"
-          description: Security Group for  EC2 Servers
+          state: absent
           region: "{{ region }}"
           rules:
             - proto: tcp
