@@ -3,15 +3,7 @@
     hosts: localhost
     connection: local
     gather_facts: False
-    tags: provisioning
-    # required parameters
-    vars:
-      instance_type: t2.micro
-      security_group: ansible_demo_SG
-      image:  ami-0567e0d2b4b2169ae
-      keypair: sonarqube
-      region: ap-south-1 # Change the Region
-      count: 1
+    tags: provisionig
  
     # Task that will be used to Launch/Create an EC2 Instance
     tasks:
