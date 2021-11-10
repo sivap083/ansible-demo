@@ -15,30 +15,6 @@
  
     # Task that will be used to Launch/Create an EC2 Instance
     tasks:
- 
-      - name: Create a security group
-        local_action: 
-          module: ec2_group
-          name: "{{ security_group }}"
-          state: absent
-          region: "{{ region }}"
-          rules:
-            - proto: tcp
-              from_port: 22
-              to_port: 22
-              cidr_ip: 0.0.0.0/0
-            - proto: tcp
-              from_port: 8080
-              to_port: 8080
-              cidr_ip: 0.0.0.0/0
-            - proto: tcp
-              from_port: 443
-              to_port: 443
-              cidr_ip: 0.0.0.0/0
-          rules_egress:
-            - proto: all
-              cidr_ip: 0.0.0.0/0
-        register: basic_firewall
         
       - name: Launching  the new EC2 Instance
         ec2:
