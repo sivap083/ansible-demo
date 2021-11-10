@@ -41,7 +41,7 @@
           rules_egress:
             - proto: all
               cidr_ip: 0.0.0.0/0
-      register: basic_firewall 
+     register: basic_firewall 
    
        
   
