@@ -18,8 +18,8 @@
        monitoring: no
        vpc_subnet_id: subnet-099c5c4757d183892
        assign_public_ip: yes
-   - name: Create a security group
-        local_action: 
+  - name: Create a security group
+    local_action: 
           module: ec2_group
           name: "{{ security_group }}"
           description: Security Group for EC2 Servers
